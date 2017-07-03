@@ -1,0 +1,9 @@
+
+<div id=game-color-wrapper>
+  <div class="color">
+  <input id="colorInput" [colorPicker]="color" 
+         (colorPickerChange)="updateCubeMaterialColor($event)" 
+         [style.background]="color"
+         [value]="color"/>
+  </div>
+</div>

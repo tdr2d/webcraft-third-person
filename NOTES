@@ -1,0 +1,25 @@
+TODO:
+domain : netkunst.tk
+
+BUGS:
+	delete does not work
+
+
+FRONT:
+	main page:
+		move in map
+		change block color
+
+	index page
+	login page
+
+BACKEND:
+	login
+	states of the player in the ddb when he leaves
+	sauvegarder la map
+	refresh all
+
+	handle frames
+	separer la map en plusieur sous map
+
+
