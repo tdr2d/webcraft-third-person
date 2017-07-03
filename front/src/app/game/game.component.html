@@ -1,9 +1,16 @@
-
-<div id=game-color-wrapper>
+<div id="gameCanvas">
+	
+</div>
+<div id="game-color-wrapper">
   <div class="color">
   <input id="colorInput" [colorPicker]="color" 
          (colorPickerChange)="updateCubeMaterialColor($event)" 
          [style.background]="color"
          [value]="color"/>
   </div>
+</div>
+
+<div id="game-controls">
+	<img (mousedown)="rotateMap(-1)" (mouseup)="rotating=false" class="game-controls-button-left" src="assets/arrow-left.png">
+	<img (mousedown)="rotateMap(1)" (mouseup)="rotating=false" class="game-controls-button-right" src="assets/arrow-right.png">
 </div>

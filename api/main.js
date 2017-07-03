@@ -41,14 +41,12 @@ wsServer.on('request', function(request) {
   connection.on('message', function(message) {
     if (message.type === 'utf8') {
       console.log('Received Message: ' + message.utf8Data);
-      var voxel = JSON.parse(message.utf8Data)
+      var voxel = JSON.parse(message.utf8Data);
+      if (!voxel)
+        return;
       var stringKey = voxel.position.x + "," + voxel.position.y + "," + voxel.position.z;
       MAP[stringKey] = voxel;
       braodcast(message.utf8Data);
-    }
-    else if (message.type === 'binary') {
-      console.log('Received Binary Message of ' + message.binaryData.length + ' bytes');
-      connection.sendBytes(message.binaryData);
     }
   });
   connection.on('close', function(reasonCode, description) {

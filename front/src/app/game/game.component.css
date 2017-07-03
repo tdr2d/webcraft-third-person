@@ -1,3 +1,9 @@
+#gameCanvas{
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
 #game-color-wrapper{
 	position: fixed;
 	left: 0;
@@ -13,3 +19,19 @@
     margin: 0;
     border: 0;
 }
+
+#game-controls{
+	position: fixed;
+	top: calc(100% - 50px);
+	left:50%;
+	display:block;
+	text-align:center;
+	transform: translateX(-50%) translateY(-50%);
+}
+
+.game-controls-button{
+	z-index: 3;
+}
+
+.game-controls-button-right:hover{box-shadow: 3px 0 6px rgba(0,0,0,.24);}
+.game-controls-button-left:hover{box-shadow: -3px 0px 6px rgba(0,0,0,.24);}
